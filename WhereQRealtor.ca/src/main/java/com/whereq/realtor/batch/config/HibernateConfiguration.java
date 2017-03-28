@@ -33,9 +33,9 @@ public class HibernateConfiguration {
 	    	ComboPooledDataSource dataSource = new ComboPooledDataSource();
 	        dataSource.setDriverClass("com.mysql.jdbc.Driver");
 	        // IMPORTANT! THE rewriteBatchedStatements=true is required, otherwise mysql won'tchange statements to one batch insert!
-	        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/whereq_realtor?rewriteBatchedStatements=true");
-	        dataSource.setUser("root");
-	        dataSource.setPassword("root");
+	        dataSource.setJdbcUrl("jdbc:mysql://supernova:3306/treb?rewriteBatchedStatements=true");
+	        dataSource.setUser("novasql");
+	        dataSource.setPassword("novasql");
 	 
 	        return dataSource;
 	    }

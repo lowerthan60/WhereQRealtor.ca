@@ -8,6 +8,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import com.whereq.realtor.batch.persist.ListingPO;
+
 public class TestListingMarshing 
 {
 	static ResidentialProperty residentialProperty = new ResidentialProperty();
@@ -31,12 +33,13 @@ public class TestListingMarshing
 	private static void unMarshalingTest() throws JAXBException {
 		JAXBContext jaxbContext = JAXBContext.newInstance(REProperties.class);
 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-		REProperties reProperties = (REProperties) jaxbUnmarshaller.unmarshal( new File("c:/temp/listing_test.xml") );
+		REProperties reProperties = (REProperties) jaxbUnmarshaller.unmarshal( new File("c:/tmp/vow.xml") );
 		
 		for (ResidentialProperty residentialProperty : reProperties.getResidentialProperties()) {
 			for(ListingFull listingFull : residentialProperty.getListings())
 			{
 				System.out.println(listingFull.getMls());
+				
 			}	
 		}
 		
@@ -49,6 +52,6 @@ public class TestListingMarshing
 		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
  
 		jaxbMarshaller.marshal(residentialProperty, System.out);
-		jaxbMarshaller.marshal(residentialProperty, new File("c:/temp/listing_marshaling_test.xml"));
+		jaxbMarshaller.marshal(residentialProperty, new File("c:/tmp/vow.xml"));
 	}
 }
