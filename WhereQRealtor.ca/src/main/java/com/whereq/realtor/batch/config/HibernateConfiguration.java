@@ -34,8 +34,8 @@ public class HibernateConfiguration {
 	        dataSource.setDriverClass("com.mysql.jdbc.Driver");
 	        // IMPORTANT! THE rewriteBatchedStatements=true is required, otherwise mysql won'tchange statements to one batch insert!
 	        dataSource.setJdbcUrl("jdbc:mysql://supernova:3306/treb?rewriteBatchedStatements=true");
-	        dataSource.setUser("novasql");
-	        dataSource.setPassword("novasql");
+	        dataSource.setUser("root");
+	        dataSource.setPassword("root");
 	 
 	        return dataSource;
 	    }
