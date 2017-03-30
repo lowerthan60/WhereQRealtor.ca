@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -13,6 +14,7 @@ import org.hibernate.annotations.GenericGenerator;
  *
  */
 @Entity
+@Table (name = "FH_Listing")
 public class ListingPO {
 	
 	/**
@@ -28,10 +30,95 @@ public class ListingPO {
 	
 	@Column
 	private String name;
+	
+	@Column(name = "ml_num")
+	private String MLS;
 
-	public ListingPO(String exampleText) {
-		this.name = exampleText;
+	@Column(name = "addr")
+	private String Address;
+
+
+	@Column(name = "s_r")
+	private String SaleLease;
+	
+	
+	@Column(name = "lp_dol")
+	private Double ListPrice;
+	
+
+	public long getId() {
+		return id;
 	}
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getMLS() {
+		return MLS;
+	}
+
+
+
+	public void setMLS(String mLS) {
+		MLS = mLS;
+	}
+
+
+
+	public String getAddress() {
+		return Address;
+	}
+
+
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+
+
+
+	public String getSaleLease() {
+		return SaleLease;
+	}
+
+
+
+	public void setSaleLease(String saleLease) {
+		SaleLease = saleLease;
+	}
+
+
+
+	public double getListPrice() {
+		return ListPrice;
+	}
+
+
+
+	public void setListPrice(double listPrice) {
+		ListPrice = listPrice;
+	}
+
+
+	
+	
 
 	@Override
 	public int hashCode() {
