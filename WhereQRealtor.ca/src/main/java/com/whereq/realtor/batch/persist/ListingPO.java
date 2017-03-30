@@ -1,10 +1,14 @@
 package com.whereq.realtor.batch.persist;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -14,7 +18,8 @@ import org.hibernate.annotations.GenericGenerator;
  *
  */
 @Entity
-@Table (name = "FH_Listing")
+//@Table (name = "fh_listing", uniqueConstraints={@UniqueConstraint(columnNames = {"ml_num" })})
+@Table (name = "fh_listing")
 public class ListingPO {
 	
 	/**
@@ -28,10 +33,8 @@ public class ListingPO {
 	@GenericGenerator(name = "generator", strategy = "increment")
 	private long id;
 	
-	@Column
-	private String name;
 	
-	@Column(name = "ml_num")
+	@Column(name = "ml_num", unique=true)
 	private String MLS;
 
 	@Column(name = "addr")
@@ -42,9 +45,202 @@ public class ListingPO {
 	private String SaleLease;
 	
 	
-	@Column(name = "lp_dol")
+	@Column(name = "lp_dol", columnDefinition="Decimal(11)")
 	private Double ListPrice;
+
 	
+	@Column(name = "taxes", columnDefinition="Decimal(8,2)")
+	private Double Taxes;
+	
+
+	@Column(name = "yr", columnDefinition="Decimal(4,0)")
+	private Integer TaxYear;
+	
+	@Column(name = "Province")
+	private String Province;
+	
+	@Column(name = "zip")
+	private String PostalCode;
+	
+	@Column(name = "legal_desc")
+	private String LegalDescription;
+	
+	@Column(name = "municipality_district")
+	private String MunicipalityDistrict;
+	
+	@Column(name = "vend_pis")
+	private String SellerPropertyInfoStatement;
+	
+	@Column(name = "timestamp_sql", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	private Date  PixUpdtedDt;
+	
+	@Column(name = "rltr")
+	private String ListBrokerage;
+	
+	@Column(name = "status")
+	private String Status;	
+
+//	@Lob
+//	@Column(name = "ad_text",nullable = false, length = 655)
+//	private byte[] RemarksForClients;	
+//
+//	@Column(name = "extras")
+//	private String Extras;	
+	
+	
+	
+	public String getStatus() {
+		return Status;
+	}
+
+
+
+	public void setStatus(String status) {
+		Status = status;
+	}
+
+
+
+	public String getListBrokerage() {
+		return ListBrokerage;
+	}
+
+
+
+	public void setListBrokerage(String listBrokerage) {
+		ListBrokerage = listBrokerage;
+	}
+
+
+
+
+
+
+//	public byte[] getRemarksForClients() {
+//		return RemarksForClients;
+//	}
+//
+//
+//
+//	public void setRemarksForClients(byte[] remarksForClients) {
+//		RemarksForClients = remarksForClients;
+//	}
+//
+//
+//
+//	public String getExtras() {
+//		return Extras;
+//	}
+//
+//
+//
+//	public void setExtras(String extras) {
+//		Extras = extras;
+//	}
+
+
+
+	public Double getTaxes() {
+		return Taxes;
+	}
+
+
+
+	public void setTaxes(Double taxes) {
+		Taxes = taxes;
+	}
+
+
+
+	public Integer getTaxYear() {
+		return TaxYear;
+	}
+
+
+
+	public void setTaxYear(Integer taxYear) {
+		TaxYear = taxYear;
+	}
+
+
+
+	public String getProvince() {
+		return Province;
+	}
+
+
+
+	public void setProvince(String province) {
+		Province = province;
+	}
+
+
+
+	public String getPostalCode() {
+		return PostalCode;
+	}
+
+
+
+	public void setPostalCode(String postalCode) {
+		PostalCode = postalCode;
+	}
+
+
+
+	public String getLegalDescription() {
+		return LegalDescription;
+	}
+
+
+
+	public void setLegalDescription(String legalDescription) {
+		LegalDescription = legalDescription;
+	}
+
+
+
+	public String getMunicipalityDistrict() {
+		return MunicipalityDistrict;
+	}
+
+
+
+	public void setMunicipalityDistrict(String municipalityDistrict) {
+		MunicipalityDistrict = municipalityDistrict;
+	}
+
+
+
+	public String getSellerPropertyInfoStatement() {
+		return SellerPropertyInfoStatement;
+	}
+
+
+
+	public void setSellerPropertyInfoStatement(String sellerPropertyInfoStatement) {
+		SellerPropertyInfoStatement = sellerPropertyInfoStatement;
+	}
+
+
+
+	public Date getPixUpdtedDt() {
+		return PixUpdtedDt;
+	}
+
+
+
+	public void setPixUpdtedDt(Date pixUpdtedDt) {
+		PixUpdtedDt = pixUpdtedDt;
+	}
+
+
+
+	public void setListPrice(Double listPrice) {
+		ListPrice = listPrice;
+	}
+
+
 
 	public long getId() {
 		return id;
@@ -55,19 +251,6 @@ public class ListingPO {
 	public void setId(long id) {
 		this.id = id;
 	}
-
-
-
-	public String getName() {
-		return name;
-	}
-
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 
 
 	public String getMLS() {
@@ -117,31 +300,6 @@ public class ListingPO {
 	}
 
 
-	
-	
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ListingPO other = (ListingPO) obj;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
-	}
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @author bacon
  */
 @Component
-public interface Repository extends JpaRepository<ListingPO, Long> {
+public interface FHListingRepository extends JpaRepository<ListingPO, Long> {
 	
 	
 }

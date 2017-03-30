@@ -30,14 +30,14 @@ public class ListingFull {
 	@XmlElement(name = "AptUnit")
 	private String aptUnit;
 
-	@XmlElement(name = "Washrooms", type = Short.class)
-	private short washrooms;
+	@XmlElement(name = "Washrooms" )
+	private int washrooms;
 
-	@XmlElement(name = "Bedrooms", type = Short.class)
-	private short bedrooms;
+	@XmlElement(name = "Bedrooms" )
+	private int bedrooms;
 	
-	@XmlElement(name = "BedroomsPlus", type = Short.class)
-	private short bedroomPlus;
+	@XmlElement(name = "BedroomsPlus" )
+	private int bedroomPlus;
 	
 	@XmlElement(name = "Basement1")
 	private String basement1;
@@ -45,34 +45,35 @@ public class ListingFull {
 	@XmlElement(name = "Basement2")
 	private String basement2;
 	
-	@XmlElement(name = "CableTVIncluded", type = Character.class)
-	private char cableTVIncluded;
+	@XmlElement(name = "CableTVIncluded")
+	private String cableTVIncluded;
 	
-	@XmlElement(name = "CacIncluded", type = Character.class)
-	private char cacIncluded;
+	@XmlElement(name = "CacIncluded")
+	private String cacIncluded;
 	
-	@XmlElement(name = "CommonElementsIncluded", type = Character.class)
-	private char commonElementsIncluded;
+	@XmlElement(name = "CommonElementsIncluded")
+	private String commonElementsIncluded;
 	
-	@XmlElement(name = "FrontingOnNSEW", type = Character.class)
-	private char fontingOnNSEW;
+	@XmlElement(name = "FrontingOnNSEW")
+	private String fontingOnNSEW;
+	
 	@XmlElement(name = "Province")
 	private String province;
 	
 	@XmlElement(name = "DirectionsCrossStreets")
 	private String directionsCrossStreets;
 	
-	@XmlElement(name = "FamilyRoom", type = Character.class)
+	@XmlElement(name = "FamilyRoom")
 	private String familyRoom;
 	
-	@XmlElement(name = "LotDepth", type = Float.class)
-	private float lotDepth;
+	@XmlElement(name = "LotDepth")
+	private double lotDepth;
 	
 	@XmlElement(name = "Drive")
 	private String drive;
 	
-	@XmlElement(name = "UtilitiesHydro", type = Character.class)
-	private char utilitiesHydro;
+	@XmlElement(name = "UtilitiesHydro")
+	private String utilitiesHydro;
 	
 	@XmlElement(name = "Elevator")
 	private String elevator;
@@ -83,11 +84,11 @@ public class ListingFull {
 	@XmlElement(name = "FarmAgriculture")
 	private String farmAgriculture;
 	
-	@XmlElement(name = "FireplaceStove", type = Character.class)
-	private char fireplaceStove;
+	@XmlElement(name = "FireplaceStove")
+	private String fireplaceStove;
 	
-	@XmlElement(name = "LotFront", type = Float.class)
-	private float lotFront;
+	@XmlElement(name = "LotFront")
+	private double lotFront;
 	
 	@XmlElement(name = "HeatSource")
 	private String heatSource;
@@ -95,17 +96,17 @@ public class ListingFull {
 	@XmlElement(name = "GarageType")
 	private String garageType;
 	
-	@XmlElement(name = "UtilitiesGas", type = Character.class)
-	private char utilitiesGas;
+	@XmlElement(name = "UtilitiesGas")
+	private String utilitiesGas;
 	
-	@XmlElement(name = "HeatIncluded", type = Character.class)
-	private char heatIncluded;
+	@XmlElement(name = "HeatIncluded")
+	private String heatIncluded;
 	
 	@XmlElement(name = "HeatType")
 	private String heatType;
 	
-	@XmlElement(name = "HydroIncluded", type = Character.class)
-	private char hydroIncluded;
+	@XmlElement(name = "HydroIncluded")
+	private String hydroIncluded;
 	
 	@XmlElement(name = "LotIrregularities")
 	private String lotIrregularities;
@@ -158,8 +159,8 @@ public class ListingFull {
 	@XmlElement(name = "MLS")
 	private String mls;
 	
-	@XmlElement(name = "Kitchens", type = Short.class)
-	private short kitchens;
+	@XmlElement(name = "Kitchens" )
+	private int kitchens;
 	
 	@XmlElement(name = "OutofAreaMunicipality")
 	private String outOfAreaMunicipality;
@@ -170,14 +171,14 @@ public class ListingFull {
 	@XmlElement(name = "ParkCostMo", type = Float.class)
 	private float parkCostMo;
 	
-	@XmlElement(name = "ParkingSpaces", type = Integer.class)
+	@XmlElement(name = "ParkingSpaces" )
 	private int parkingSpaces;
 	
 	@XmlElement(name = "Pool")
 	private String pool;
 	
-	@XmlElement(name = "ParkingIncluded", type = Character.class)
-	private char parckingIncluded;
+	@XmlElement(name = "ParkingIncluded" )
+	private String parckingIncluded;
 	
 	@XmlElement(name = "ListBrokerage")
 	private String listBrokerage;
@@ -338,8 +339,11 @@ public class ListingFull {
 	@XmlElement(name = "Room12Desc3")
 	private String room12Desc3;
 
-	@XmlElement(name = "RoomsPlus", type = Short.class)
-	private short roomsPlus;
+	@XmlElement(name = "RoomsPlus")
+	private int roomsPlus;
+	
+	@XmlElement(name = "Rooms")
+	private int rooms;
 	
 	@XmlElement(name = "SaleLease")
 	private String saleLease;
@@ -353,8 +357,8 @@ public class ListingFull {
 	@XmlElement(name = "StreetName")
 	private String streetName;
 	
-	@XmlElement(name = "StreetDirection", type = Character.class)
-	private char streetDirection;
+	@XmlElement(name = "StreetDirection")
+	private String streetDirection;
 		
 	@XmlElement(name = "Street")
 	private String street;
@@ -362,14 +366,14 @@ public class ListingFull {
 	@XmlElement(name = "StreetAbbreviation")
 	private String streetAbbreviation;
 	
-	@XmlElement(name = "Status", type = Character.class)
-	private char status;
+	@XmlElement(name = "Status")
+	private String status;
 	
 	@XmlElement(name = "Style")
 	private String style;
 	
-	@XmlElement(name = "Taxes", type = Float.class)
-	private float taxes;
+	@XmlElement(name = "Taxes", type = Double.class)
+	private double taxes;
 	
 	@XmlElement(name = "VirtualTourURL")
 	private String virtualTourURL;
@@ -380,11 +384,11 @@ public class ListingFull {
 	@XmlElement(name = "Uffi")
 	private String uffi;
 	
-	@XmlElement(name = "UtilitiesCable", type = Character.class)
-	private char utilitiesCable;
+	@XmlElement(name = "UtilitiesCable" )
+	private String utilitiesCable;
 	
-	@XmlElement(name = "UtilitiesTelephone", type = Character.class)
-	private char utilitiesTelephone;
+	@XmlElement(name = "UtilitiesTelephone" )
+	private String utilitiesTelephone;
 	
 	@XmlElement(name = "SellerPropertyInfoStatement")
 	private String sellerPropertyInfoStatement;
@@ -392,48 +396,48 @@ public class ListingFull {
 	@XmlElement(name = "Water")
 	private String water;
 	
-	@XmlElement(name = "WaterIncluded", type = Character.class)
-	private char waterIncluded;
+	@XmlElement(name = "WaterIncluded" )
+	private String waterIncluded;
 	
-	@XmlElement(name = "WashroomsType1", type = Short.class)
-	private short washroomsType1;
-	@XmlElement(name = "WashroomsType1Pcs", type = Short.class)
-	private short washroomsType1Pcs;
+	@XmlElement(name = "WashroomsType1")
+	private int washroomsType1;
+	@XmlElement(name = "WashroomsType1Pcs")
+	private int washroomsType1Pcs;
 	@XmlElement(name = "WashroomsType1Level")
-	private short washroomsType1Level;
+	private String washroomsType1Level;
 	
-	@XmlElement(name = "WashroomsType2", type = Short.class)
-	private short washroomsType2;
-	@XmlElement(name = "WashroomsType2Pcs", type = Short.class)
-	private short washroomsType2Pcs;
+	@XmlElement(name = "WashroomsType2" )
+	private int washroomsType2;
+	@XmlElement(name = "WashroomsType2Pcs" )
+	private int washroomsType2Pcs;
 	@XmlElement(name = "WashroomsType2Level")
-	private short washroomsType2Level;
+	private String washroomsType2Level;
 	
-	@XmlElement(name = "WashroomsType3", type = Short.class)
-	private short washroomsType3;
-	@XmlElement(name = "WashroomsType3Pcs", type = Short.class)
-	private short washroomsType3Pcs;
+	@XmlElement(name = "WashroomsType3" )
+	private int washroomsType3;
+	@XmlElement(name = "WashroomsType3Pcs" )
+	private int washroomsType3Pcs;
 	@XmlElement(name = "WashroomsType3Level")
-	private short washroomsType3Level;
+	private String washroomsType3Level;
 	
-	@XmlElement(name = "WashroomsType4", type = Short.class)
-	private short washroomsType4;
-	@XmlElement(name = "WashroomsType4Pcs", type = Short.class)
-	private short washroomsType4Pcs;
+	@XmlElement(name = "WashroomsType4" )
+	private int washroomsType4;
+	@XmlElement(name = "WashroomsType4Pcs" )
+	private int washroomsType4Pcs;
 	@XmlElement(name = "WashroomsType4Level")
-	private short washroomsType4Level;
+	private String washroomsType4Level;
 	
-	@XmlElement(name = "WashroomsType5", type = Short.class)
-	private short washroomsType5;
-	@XmlElement(name = "WashroomsType5Pcs", type = Short.class)
-	private short washroomsType5Pcs;
+	@XmlElement(name = "WashroomsType5" )
+	private int washroomsType5;
+	@XmlElement(name = "WashroomsType5Pcs" )
+	private int washroomsType5Pcs;
 	@XmlElement(name = "WashroomsType5Level")
-	private short washroomsType5Level;
+	private int washroomsType5Level;
 	
 	@XmlElement(name = "WaterSupplyTypes")
 	private String waterSupplyTypes;
 	
-	@XmlElement(name = "TaxYear", type = Integer.class)
+	@XmlElement(name = "TaxYear" )
 	private int taxYear;
 	
 	@XmlElement(name = "ApproxAge")
@@ -469,10 +473,10 @@ public class ListingFull {
 	@XmlElement(name = "OtherStructures2")
 	private String otherStructures2;
 	
-	@XmlElement(name = "AssessmentYear", type = Integer.class)
+	@XmlElement(name = "AssessmentYear" )
 	private int assessmentYear;
 	
-	@XmlElement(name = "GarageSpaces", type = Integer.class)
+	@XmlElement(name = "GarageSpaces" )
 	private int garageSpaces;
 	
 	@XmlElement(name = "LeasedTerms")
@@ -481,20 +485,20 @@ public class ListingFull {
 	@XmlElement(name = "VirtualTourUploadDate")
 	private String virtualTourUploadDate;
 	
-	@XmlElement(name = "DisplayAddressOnInternet", type = Character.class)
-	private char displayAddressOnInternet;
+	@XmlElement(name = "DisplayAddressOnInternet" )
+	private String displayAddressOnInternet;
 	
-	@XmlElement(name = "Map", type = Integer.class)
+	@XmlElement(name = "Map" )
 	private int map;
 	
-	@XmlElement(name = "MapColumn", type = Integer.class)
+	@XmlElement(name = "MapColumn" )
 	private int mapColumn;
 	
-	@XmlElement(name = "MapRow", type = Character.class)
-	private char mapRow;
+	@XmlElement(name = "MapRow")
+	private String mapRow;
 	
-	@XmlElement(name = "AllInclusive", type = Character.class)
-	private char allInclusive;
+	@XmlElement(name = "AllInclusive" )
+	private String allInclusive;
 	
 	@XmlElement(name = "Furnished")
 	private String furnished;
@@ -502,17 +506,17 @@ public class ListingFull {
 	@XmlElement(name = "LaundryAccess")
 	private String laundryAccess;
 	
-	@XmlElement(name = "PrivateEntrance", type = Character.class)
-	private char privateEntrance;
+	@XmlElement(name = "PrivateEntrance" )
+	private String privateEntrance;
 	
 	@XmlElement(name = "AddlMonthlyFees", type = Long.class)
 	private long addlMonthlyFees;
 	
-	@XmlElement(name = "CentralVac", type = Character.class)
-	private char centralVac;
+	@XmlElement(name = "CentralVac" )
+	private String centralVac;
 	
-	@XmlElement(name = "KitchensPlus", type = Short.class)
-	private short kitchensPlus;
+	@XmlElement(name = "KitchensPlus" )
+	private int kitchensPlus;
 	
 	@XmlElement(name = "LaundryLevel")
 	private String laundryLevel;
@@ -529,8 +533,8 @@ public class ListingFull {
 	@XmlElement(name = "PropertyFeatures6")
 	private String propertyFeatures6;
 	
-	@XmlElement(name = "Retirement", type = Character.class)
-	private char retirement;
+	@XmlElement(name = "Retirement" )
+	private String retirement;
 	
 	@XmlElement(name = "Waterfront")
 	private String waterfront;
@@ -634,27 +638,32 @@ public class ListingFull {
 		this.aptUnit = aptUnit;
 	}
 
-	public short getWashrooms() {
+	public int getWashrooms() {
 		return washrooms;
 	}
 
-	public void setWashrooms(short washRooms) {
+	public void setWashrooms(int washRooms) {
 		this.washrooms = washRooms;
 	}
 
-	public short getBedrooms() {
-		return bedrooms;
-	}
 
-	public void setBedrooms(short bedRooms) {
-		this.bedrooms = bedRooms;
-	}
-
-	public short getBedroomPlus() {
+	public int getBedroomPlus() {
 		return bedroomPlus;
 	}
 
-	public void setBedroomPlus(short bedroomPlus) {
+	public int getBedrooms() {
+		return bedrooms;
+	}
+
+	public void setBedrooms(int beddrooms) {
+		this.bedrooms = beddrooms;
+	}
+
+	public void setRoomsPlus(Integer roomsPlus) {
+		this.roomsPlus = roomsPlus;
+	}
+
+	public void setBedroomPlus(int bedroomPlus) {
 		this.bedroomPlus = bedroomPlus;
 	}
 
@@ -674,35 +683,35 @@ public class ListingFull {
 		this.basement2 = basement2;
 	}
 
-	public char getCableTVIncluded() {
+	public String getCableTVIncluded() {
 		return cableTVIncluded;
 	}
 
-	public void setCableTVIncluded(char cableTVIncluded) {
+	public void setCableTVIncluded(String cableTVIncluded) {
 		this.cableTVIncluded = cableTVIncluded;
 	}
 
-	public char getCacIncluded() {
+	public String getCacIncluded() {
 		return cacIncluded;
 	}
 
-	public void setCacIncluded(char cacIncluded) {
+	public void setCacIncluded(String cacIncluded) {
 		this.cacIncluded = cacIncluded;
 	}
 
-	public char getCommonElementsIncluded() {
+	public String getCommonElementsIncluded() {
 		return commonElementsIncluded;
 	}
 
-	public void setCommonElementsIncluded(char commonElementsIncluded) {
+	public void setCommonElementsIncluded(String commonElementsIncluded) {
 		this.commonElementsIncluded = commonElementsIncluded;
 	}
 
-	public char getFontingOnNSEW() {
+	public String getFontingOnNSEW() {
 		return fontingOnNSEW;
 	}
 
-	public void setFontingOnNSEW(char fontingOnNSEW) {
+	public void setFontingOnNSEW(String fontingOnNSEW) {
 		this.fontingOnNSEW = fontingOnNSEW;
 	}
 
@@ -730,11 +739,11 @@ public class ListingFull {
 		this.familyRoom = familyRoom;
 	}
 
-	public float getLotDepth() {
+	public double getLotDepth() {
 		return lotDepth;
 	}
 
-	public void setLotDepth(float lotDepth) {
+	public void setLotDepth(double lotDepth) {
 		this.lotDepth = lotDepth;
 	}
 
@@ -746,11 +755,11 @@ public class ListingFull {
 		this.drive = drive;
 	}
 
-	public char getUtilitiesHydro() {
+	public String getUtilitiesHydro() {
 		return utilitiesHydro;
 	}
 
-	public void setUtilitiesHydro(char utilitiesHydro) {
+	public void setUtilitiesHydro(String utilitiesHydro) {
 		this.utilitiesHydro = utilitiesHydro;
 	}
 
@@ -778,19 +787,19 @@ public class ListingFull {
 		this.farmAgriculture = farmAgriculture;
 	}
 
-	public char getFireplaceStove() {
+	public String getFireplaceStove() {
 		return fireplaceStove;
 	}
 
-	public void setFireplaceStove(char fireplaceStove) {
+	public void setFireplaceStove(String fireplaceStove) {
 		this.fireplaceStove = fireplaceStove;
 	}
 
-	public float getLotFront() {
+	public double getLotFront() {
 		return lotFront;
 	}
 
-	public void setLotFront(float lotFront) {
+	public void setLotFront(double lotFront) {
 		this.lotFront = lotFront;
 	}
 
@@ -810,19 +819,19 @@ public class ListingFull {
 		this.garageType = garageType;
 	}
 
-	public char getUtilitiesGas() {
+	public String getUtilitiesGas() {
 		return utilitiesGas;
 	}
 
-	public void setUtilitiesGas(char utilitiesGas) {
+	public void setUtilitiesGas(String utilitiesGas) {
 		this.utilitiesGas = utilitiesGas;
 	}
 
-	public char getHeatIncluded() {
+	public String getHeatIncluded() {
 		return heatIncluded;
 	}
 
-	public void setHeatIncluded(char heatIncluded) {
+	public void setHeatIncluded(String heatIncluded) {
 		this.heatIncluded = heatIncluded;
 	}
 
@@ -834,11 +843,11 @@ public class ListingFull {
 		this.heatType = heatType;
 	}
 
-	public char getHydroIncluded() {
+	public String getHydroIncluded() {
 		return hydroIncluded;
 	}
 
-	public void setHydroIncluded(char hydroIncluded) {
+	public void setHydroIncluded(String hydroIncluded) {
 		this.hydroIncluded = hydroIncluded;
 	}
 
@@ -978,11 +987,11 @@ public class ListingFull {
 		this.mls = mls;
 	}
 
-	public short getKitchens() {
+	public int getKitchens() {
 		return kitchens;
 	}
 
-	public void setKitchens(short kitchens) {
+	public void setKitchens(int kitchens) {
 		this.kitchens = kitchens;
 	}
 
@@ -1026,11 +1035,11 @@ public class ListingFull {
 		this.pool = pool;
 	}
 
-	public char getParckingIncluded() {
+	public String getParckingIncluded() {
 		return parckingIncluded;
 	}
 
-	public void setParckingIncluded(char parckingIncluded) {
+	public void setParckingIncluded(String parckingIncluded) {
 		this.parckingIncluded = parckingIncluded;
 	}
 
@@ -1618,11 +1627,11 @@ public class ListingFull {
 		this.room12Desc3 = room12Desc3;
 	}
 
-	public short getRoomsPlus() {
+	public int getRoomsPlus() {
 		return roomsPlus;
 	}
 
-	public void setRoomsPlus(short roomsPlus) {
+	public void setRoomsPlus(int roomsPlus) {
 		this.roomsPlus = roomsPlus;
 	}
 
@@ -1658,11 +1667,11 @@ public class ListingFull {
 		this.streetName = streetName;
 	}
 
-	public char getStreetDirection() {
+	public String getStreetDirection() {
 		return streetDirection;
 	}
 
-	public void setStreetDirection(char streetDirection) {
+	public void setStreetDirection(String streetDirection) {
 		this.streetDirection = streetDirection;
 	}
 
@@ -1682,11 +1691,11 @@ public class ListingFull {
 		this.streetAbbreviation = streetAbbreviation;
 	}
 
-	public char getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(char status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -1698,7 +1707,7 @@ public class ListingFull {
 		this.style = style;
 	}
 
-	public float getTaxes() {
+	public double getTaxes() {
 		return taxes;
 	}
 
@@ -1730,19 +1739,19 @@ public class ListingFull {
 		this.uffi = uffi;
 	}
 
-	public char getUtilitiesCable() {
+	public String getUtilitiesCable() {
 		return utilitiesCable;
 	}
 
-	public void setUtilitiesCable(char utilitiesCable) {
+	public void setUtilitiesCable(String utilitiesCable) {
 		this.utilitiesCable = utilitiesCable;
 	}
 
-	public char getUtilitiesTelephone() {
+	public String getUtilitiesTelephone() {
 		return utilitiesTelephone;
 	}
 
-	public void setUtilitiesTelephone(char utilitiesTelephone) {
+	public void setUtilitiesTelephone(String utilitiesTelephone) {
 		this.utilitiesTelephone = utilitiesTelephone;
 	}
 
@@ -1762,131 +1771,133 @@ public class ListingFull {
 		this.water = water;
 	}
 
-	public char getWaterIncluded() {
+	public String getWaterIncluded() {
 		return waterIncluded;
 	}
 
-	public void setWaterIncluded(char waterIncluded) {
+	public void setWaterIncluded(String waterIncluded) {
 		this.waterIncluded = waterIncluded;
 	}
 
-	public short getWashroomsType1() {
+	public int getWashroomsType1() {
 		return washroomsType1;
 	}
 
-	public void setWashroomsType1(short washroomsType1) {
+	public void setWashroomsType1(int washroomsType1) {
 		this.washroomsType1 = washroomsType1;
 	}
 
-	public short getWashroomsType1Pcs() {
+	public int getWashroomsType1Pcs() {
 		return washroomsType1Pcs;
 	}
 
-	public void setWashroomsType1Pcs(short washroomsType1Pcs) {
+	public void setWashroomsType1Pcs(int washroomsType1Pcs) {
 		this.washroomsType1Pcs = washroomsType1Pcs;
 	}
 
-	public short getWashroomsType1Level() {
+	public String getWashroomsType1Level() {
 		return washroomsType1Level;
 	}
 
-	public void setWashroomsType1Level(short washroomsType1Level) {
+	public void setWashroomsType1Level(String washroomsType1Level) {
 		this.washroomsType1Level = washroomsType1Level;
 	}
 
-	public short getWashroomsType2() {
+	public int getWashroomsType2() {
 		return washroomsType2;
 	}
 
-	public void setWashroomsType2(short washroomsType2) {
+	public void setWashroomsType2(int washroomsType2) {
 		this.washroomsType2 = washroomsType2;
 	}
 
-	public short getWashroomsType2Pcs() {
+	public int getWashroomsType2Pcs() {
 		return washroomsType2Pcs;
 	}
 
-	public void setWashroomsType2Pcs(short washroomsType2Pcs) {
+	public void setWashroomsType2Pcs(int washroomsType2Pcs) {
 		this.washroomsType2Pcs = washroomsType2Pcs;
 	}
 
-	public short getWashroomsType2Level() {
+	public String getWashroomsType2Level() {
 		return washroomsType2Level;
 	}
 
-	public void setWashroomsType2Level(short washroomsType2Level) {
+	public void setWashroomsType2Level(String washroomsType2Level) {
 		this.washroomsType2Level = washroomsType2Level;
 	}
 
-	public short getWashroomsType3() {
+	public int getWashroomsType3() {
 		return washroomsType3;
 	}
 
-	public void setWashroomsType3(short washroomsType3) {
+
+
+	public void setWashroomsType3(int washroomsType3) {
 		this.washroomsType3 = washroomsType3;
 	}
 
-	public short getWashroomsType3Pcs() {
+	public int getWashroomsType3Pcs() {
 		return washroomsType3Pcs;
 	}
 
-	public void setWashroomsType3Pcs(short washroomsType3Pcs) {
+	public void setWashroomsType3Pcs(int washroomsType3Pcs) {
 		this.washroomsType3Pcs = washroomsType3Pcs;
 	}
 
-	public short getWashroomsType3Level() {
+	public String getWashroomsType3Level() {
 		return washroomsType3Level;
 	}
 
-	public void setWashroomsType3Level(short washroomsType3Level) {
+	public void setWashroomsType3Level(String washroomsType3Level) {
 		this.washroomsType3Level = washroomsType3Level;
 	}
 
-	public short getWashroomsType4() {
+	public int getWashroomsType4() {
 		return washroomsType4;
 	}
 
-	public void setWashroomsType4(short washroomsType4) {
+	public void setWashroomsType4(int washroomsType4) {
 		this.washroomsType4 = washroomsType4;
 	}
 
-	public short getWashroomsType4Pcs() {
+	public int getWashroomsType4Pcs() {
 		return washroomsType4Pcs;
 	}
 
-	public void setWashroomsType4Pcs(short washroomsType4Pcs) {
+	public void setWashroomsType4Pcs(int washroomsType4Pcs) {
 		this.washroomsType4Pcs = washroomsType4Pcs;
 	}
 
-	public short getWashroomsType4Level() {
+	public String getWashroomsType4Level() {
 		return washroomsType4Level;
 	}
 
-	public void setWashroomsType4Level(short washroomsType4Level) {
+	public void setWashroomsType4Level(String washroomsType4Level) {
 		this.washroomsType4Level = washroomsType4Level;
 	}
 
-	public short getWashroomsType5() {
+	public int getWashroomsType5() {
 		return washroomsType5;
 	}
 
-	public void setWashroomsType5(short washroomsType5) {
+	public void setWashroomsType5(int washroomsType5) {
 		this.washroomsType5 = washroomsType5;
 	}
 
-	public short getWashroomsType5Pcs() {
+	public int getWashroomsType5Pcs() {
 		return washroomsType5Pcs;
 	}
 
-	public void setWashroomsType5Pcs(short washroomsType5Pcs) {
+	public void setWashroomsType5Pcs(int washroomsType5Pcs) {
 		this.washroomsType5Pcs = washroomsType5Pcs;
 	}
 
-	public short getWashroomsType5Level() {
+	public int getWashroomsType5Level() {
 		return washroomsType5Level;
 	}
 
-	public void setWashroomsType5Level(short washroomsType5Level) {
+	public void setWashroomsType5Level(int washroomsType5Level) {
 		this.washroomsType5Level = washroomsType5Level;
 	}
 
@@ -2026,11 +2037,11 @@ public class ListingFull {
 		this.virtualTourUploadDate = virtualTourUploadDate;
 	}
 
-	public char getDisplayAddressOnInternet() {
+	public String getDisplayAddressOnInternet() {
 		return displayAddressOnInternet;
 	}
 
-	public void setDisplayAddressOnInternet(char displayAddressOnInternet) {
+	public void setDisplayAddressOnInternet(String displayAddressOnInternet) {
 		this.displayAddressOnInternet = displayAddressOnInternet;
 	}
 
@@ -2050,19 +2061,19 @@ public class ListingFull {
 		this.mapColumn = mapColumn;
 	}
 
-	public char getMapRow() {
+	public String getMapRow() {
 		return mapRow;
 	}
 
-	public void setMapRow(char mapRow) {
+	public void setMapRow(String mapRow) {
 		this.mapRow = mapRow;
 	}
 
-	public char getAllInclusive() {
+	public String getAllInclusive() {
 		return allInclusive;
 	}
 
-	public void setAllInclusive(char allInclusive) {
+	public void setAllInclusive(String allInclusive) {
 		this.allInclusive = allInclusive;
 	}
 
@@ -2082,11 +2093,11 @@ public class ListingFull {
 		this.laundryAccess = laundryAccess;
 	}
 
-	public char getPrivateEntrance() {
+	public String getPrivateEntrance() {
 		return privateEntrance;
 	}
 
-	public void setPrivateEntrance(char privateEntrance) {
+	public void setPrivateEntrance(String privateEntrance) {
 		this.privateEntrance = privateEntrance;
 	}
 
@@ -2098,19 +2109,19 @@ public class ListingFull {
 		this.addlMonthlyFees = addlMonthlyFees;
 	}
 
-	public char getCentralVac() {
+	public String getCentralVac() {
 		return centralVac;
 	}
 
-	public void setCentralVac(char centralVac) {
+	public void setCentralVac(String centralVac) {
 		this.centralVac = centralVac;
 	}
 
-	public short getKitchensPlus() {
+	public int getKitchensPlus() {
 		return kitchensPlus;
 	}
 
-	public void setKitchensPlus(short kitchensPlus) {
+	public void setKitchensPlus(int kitchensPlus) {
 		this.kitchensPlus = kitchensPlus;
 	}
 
@@ -2154,11 +2165,11 @@ public class ListingFull {
 		this.propertyFeatures6 = propertyFeatures6;
 	}
 
-	public char getRetirement() {
+	public String getRetirement() {
 		return retirement;
 	}
 
-	public void setRetirement(char retirement) {
+	public void setRetirement(String retirement) {
 		this.retirement = retirement;
 	}
 
@@ -2296,6 +2307,19 @@ public class ListingFull {
 
 	public void setPixUpdatedDate(Date pixUpdatedDate) {
 		this.pixUpdatedDate = pixUpdatedDate;
+	}
+
+	public int getRooms() {
+		return rooms;
+	}
+
+	public void setRooms(int rooms) {
+		this.rooms = rooms;
+	}
+
+
+	public void setTaxes(double taxes) {
+		this.taxes = taxes;
 	}
 	
 	
