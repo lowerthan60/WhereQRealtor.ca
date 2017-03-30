@@ -16,6 +16,7 @@ public class Main {
 		final ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 		try {
 			context.getBean("runner",Runner.class).run();
+			
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
