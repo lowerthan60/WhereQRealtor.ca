@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
 
 import com.google.common.collect.Lists;
 import com.whereq.realtor.batch.persist.AddressRepository;
+import com.whereq.realtor.batch.persist.FHListingRepository;
 import com.whereq.realtor.batch.persist.FHPropertyRepository;
 import com.whereq.realtor.batch.persist.FH_ListingAddrPO;
 import com.whereq.realtor.batch.persist.FH_ListingExtraPO;
 import com.whereq.realtor.batch.persist.FH_PropertyPO;
 import com.whereq.realtor.batch.persist.ListingExtraRepository;
 import com.whereq.realtor.batch.persist.ListingPO;
-import com.whereq.realtor.batch.persist.FHListingRepository;
 import com.whereq.realtor.xml.bind.ListingFull;
 import com.whereq.realtor.xml.bind.REProperties;
 import com.whereq.realtor.xml.bind.ResidentialProperty;
@@ -55,7 +55,7 @@ public class Runner {
 		
 		JAXBContext jaxbContext = JAXBContext.newInstance(REProperties.class);
 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-		REProperties reProperties = (REProperties) jaxbUnmarshaller.unmarshal( new File("c:/tmp/vow.xml") );
+		REProperties reProperties = (REProperties) jaxbUnmarshaller.unmarshal( new File("c:/temp/listing_test.xml") );
 		
 		for (ResidentialProperty residentialProperty : reProperties.getResidentialProperties()) {
 			for(ListingFull listingFull : residentialProperty.getListings())
