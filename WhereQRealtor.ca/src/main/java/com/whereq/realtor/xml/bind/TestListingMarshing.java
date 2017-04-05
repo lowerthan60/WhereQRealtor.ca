@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import com.whereq.realtor.batch.persist.ListingPO;
+import com.whereq.realtor.batch.domain.ListingPO;
 
 public class TestListingMarshing 
 {
