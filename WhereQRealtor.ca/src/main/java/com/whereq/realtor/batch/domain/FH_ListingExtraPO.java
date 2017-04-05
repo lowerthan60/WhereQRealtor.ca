@@ -1,4 +1,4 @@
-package com.whereq.realtor.batch.persist;
+package com.whereq.realtor.batch.domain;
 
 import java.util.Date;
 

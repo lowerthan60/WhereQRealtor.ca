@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.whereq.realtor.batch")
-@EnableJpaRepositories(basePackages="com.whereq.realtor.batch.persist")
+@EntityScan("com.whereq.realtor.batch.domain")  
+@EnableJpaRepositories(basePackages="com.whereq.realtor.batch.repository")
 public class HibernateConfiguration {
 
 	    @Resource
@@ -33,7 +35,8 @@ public class HibernateConfiguration {
 	    	ComboPooledDataSource dataSource = new ComboPooledDataSource();
 	        dataSource.setDriverClass("com.mysql.jdbc.Driver");
 	        // IMPORTANT! THE rewriteBatchedStatements=true is required, otherwise mysql won'tchange statements to one batch insert!
-	        dataSource.setJdbcUrl("jdbc:mysql://supernova:3306/treb?rewriteBatchedStatements=true");
+//	        dataSource.setJdbcUrl("jdbc:mysql://supernova:3306/treb?rewriteBatchedStatements=true");
+	        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/whereq_realtor?rewriteBatchedStatements=true");
 	        dataSource.setUser("root");
 	        dataSource.setPassword("root");
 	 
@@ -45,7 +48,7 @@ public class HibernateConfiguration {
 	        LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 	        entityManagerFactoryBean.setDataSource(dataSource());
 	        entityManagerFactoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
-	        entityManagerFactoryBean.setPackagesToScan("com.whereq.realtor.batch.persist");
+	        entityManagerFactoryBean.setPackagesToScan("com.whereq.realtor.legacy");
 	         
 	        entityManagerFactoryBean.setJpaProperties(hibProperties());
 	        return entityManagerFactoryBean;

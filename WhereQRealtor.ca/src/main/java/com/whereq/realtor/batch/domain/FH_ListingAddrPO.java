@@ -1,4 +1,4 @@
-package com.whereq.realtor.batch.persist;
+package com.whereq.realtor.batch.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
